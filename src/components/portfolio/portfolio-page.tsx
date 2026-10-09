@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef, type FormEvent } from 'react';
 import { motion, useReducedMotion, useScroll } from 'framer-motion';
+import Lenis from 'lenis';
 import { ArrowUpRight, ArrowDown, ArrowUp, Sun, Moon, Menu, X, Code2, Braces, GraduationCap, BriefcaseBusiness, ChevronDown, BrainCircuit, Layers3, ShieldCheck, Database, FileText, Users, Calendar, CreditCard, Workflow, Building2, Github, Linkedin, Mail, MapPin, Send, ArrowRight, UserRound, Atom, Terminal, Globe, LockKeyhole } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
@@ -14,6 +15,7 @@ const appIcons=[UserRound,Building2,Users,Terminal,Calendar,Globe];
 export function PortfolioPage(){
   const timelineRef=useRef<HTMLDivElement>(null);const {scrollYProgress:pageProgress}=useScroll();const {scrollYProgress:timelineProgress}=useScroll({target:timelineRef,offset:['start 78%','end 35%']});
   const [light,setLight]=useState(true);const [menu,setMenu]=useState(false);const [active,setActive]=useState('');const [role,setRole]=useState(0);const [typed,setTyped]=useState('');const [filter,setFilter]=useState('All');const [expanded,setExpanded]=useState<number[]>([]);const [feedback,setFeedback]=useState('');const reduced=useReducedMotion();const cursor=useRef<HTMLDivElement>(null);
+  useEffect(()=>{const lenis=new Lenis({autoRaf:true,duration:1.2,easing:(t)=>Math.min(1,1.001-Math.pow(2,-10*t)),lerp:0.085,smoothWheel:true,wheelMultiplier:0.9,touchMultiplier:1.1,anchors:{offset:window.matchMedia('(max-width: 767px)').matches?-70:-88},respectReducedMotion:true});return()=>lenis.destroy();},[]);
   useEffect(()=>{if(reduced||!window.matchMedia('(pointer: fine)').matches)return;const move=(event:PointerEvent)=>{if(cursor.current){cursor.current.style.transform=`translate(${event.clientX}px,${event.clientY}px)`;cursor.current.style.opacity='.35';}};window.addEventListener('pointermove',move);return()=>window.removeEventListener('pointermove',move);},[reduced]);
   useEffect(()=>{setLight(localStorage.getItem('portfolio-theme-v2')!=='dark');},[]);
   useEffect(()=>{document.documentElement.classList.toggle('light',light);document.documentElement.classList.toggle('dark',!light);},[light]);
