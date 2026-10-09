@@ -18,17 +18,17 @@ export const portfolio = {
   skills: [{name:'Artificial Intelligence',value:95},{name:'Python',value:94},{name:'React.js',value:93},{name:'FastAPI',value:92},{name:'Docker',value:90},{name:'PostgreSQL',value:90},{name:'TypeScript',value:88},{name:'CI/CD',value:87},{name:'Kubernetes',value:82},{name:'AWS',value:80}],
   experienceHeading: 'Where Innovation Meets Execution',
   experience: [
-    {company:'Ospira Technologies Private Limited',role:'Full-stack Developer',date:'March 2026 - Present',duration:'8 months',description:'Backend orchestration, intelligent systems, LLM & RAG pipelines, type-safe frontend architecture, reactive state orchestration, data-centric application design, containerized infrastructure, continuous delivery, and immersive web experiences.',achievements:[
+    {company:'Ospira Technologies Private Limited',role:'Full-stack Developer',date:'March 2026 - Present',duration:'8 months',startMonth:'2026-03',endMonth:null,description:'Backend orchestration, intelligent systems, LLM & RAG pipelines, type-safe frontend architecture, reactive state orchestration, data-centric application design, containerized infrastructure, continuous delivery, and immersive web experiences.',achievements:[
       'Architecting and delivering scalable AI-enabled applications across full-cycle development, complex feature engineering, backend orchestration, data persistence, and API integration.',
       'Building LLM-powered workflows, RAG pipelines, and intelligent automation systems for business-critical use cases.',
       'Developing containerized, production-ready stack components with React.js, TypeScript, Python, FastAPI, PostgreSQL, Docker, Kubernetes, CI/CD, and AWS.'
     ],tech:['Python','FastAPI','React.js','TypeScript','PostgreSQL','Docker','Kubernetes','CI/CD','AWS','LLMs','RAG','AI Agents']},
-    {company:'Thirdvizion Labs',role:'Software Developer',date:'August 2025 - January 2026',duration:'6 months',description:'Architected and delivered scalable, AI-enabled applications, overseeing full-cycle development, feature engineering, backend orchestration, data persistence, and API integrations.',achievements:[
+    {company:'Thirdvizion Labs',role:'Software Developer',date:'August 2025 - January 2026',duration:'6 months',startMonth:'2025-08',endMonth:'2026-01',description:'Architected and delivered scalable, AI-enabled applications, overseeing full-cycle development, feature engineering, backend orchestration, data persistence, and API integrations.',achievements:[
       'Built AI-enabled features and modules while coordinating the end-to-end SDLC from design to deployment.',
       'Worked on backend orchestration and data layer architecture for scalable product workflows.',
       'Collaborated on API-driven application design, integration surfaces, and performance-oriented implementation.'
     ],tech:['Python','FastAPI','PostgreSQL','AI','APIs','System Design','Docker']},
-    {company:'InLustro',role:'Python Developer',date:'January 2024 - March 2024',duration:'3 months',description:'Python-focused environment, contributing to application logic, backend routines, and data-processing workflows.',achievements:[
+    {company:'InLustro',role:'Python Developer',date:'January 2024 - March 2024',duration:'3 months',startMonth:'2024-01',endMonth:'2024-03',description:'Python-focused environment, contributing to application logic, backend routines, and data-processing workflows.',achievements:[
       'Developed and refined Python backend logic for application features.',
       'Maintained clean, efficient server-side processing patterns and integration tasks.',
       'Hands-on exposure to practical software engineering workflows.'
