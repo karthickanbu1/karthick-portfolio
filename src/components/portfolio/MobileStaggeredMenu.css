@@ -1,0 +1,140 @@
+.mobile-menu-button {
+  display: none;
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 68px 0 0;
+  z-index: 41;
+  visibility: hidden;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.mobile-menu-layers,
+.mobile-menu-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.mobile-menu-layers {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.mobile-menu-layer-accent {
+  background: color-mix(in oklab, var(--primary) 18%, var(--background));
+}
+
+.mobile-menu-layer-secondary {
+  background: color-mix(in oklab, var(--secondary) 14%, var(--background));
+}
+
+.mobile-menu-layer-background {
+  background: var(--background);
+}
+
+.mobile-menu-panel {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  pointer-events: auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: clamp(28px, 8vw, 56px) clamp(24px, 7vw, 44px) 30px;
+}
+
+.mobile-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 2vh, 16px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-menu-list li {
+  overflow: hidden;
+  line-height: 1;
+}
+
+.mobile-menu-link {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--foreground);
+  font-family: var(--font-display);
+  font-size: clamp(2.35rem, 10vw, 4.3rem);
+  font-weight: 700;
+  letter-spacing: -0.065em;
+  line-height: 1.02;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link[aria-current="location"] {
+  color: var(--primary);
+}
+
+.mobile-menu-number {
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 0.35em;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.mobile-menu-socials {
+  margin-top: auto;
+  padding-top: 40px;
+}
+
+.mobile-menu-socials p {
+  margin: 0 0 12px;
+  color: var(--muted-foreground);
+  font: 10px var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.mobile-menu-socials ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-menu-socials a {
+  color: var(--foreground);
+  font-size: 13px;
+  transition: color 180ms ease;
+}
+
+.mobile-menu-socials a:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 767px) {
+  .mobile-menu-button {
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-menu-overlay {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu-link,
+  .mobile-menu-socials a {
+    transition: none;
+  }
+}
